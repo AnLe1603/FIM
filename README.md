@@ -7,3 +7,6 @@ Mô Tả:
 - Thiết kế giao diện người dùng (GUI) bằng tkinter cung cấp tính năng cấu hình, ghi nhật ký (log) chi tiết và cảnh báo
 - Triển khai tính năng sao lưu vật lý và khôi phục dữ liệu về các mốc trạng thái an toàn trong quá khứ
 - Cấu hình ứng dụng khởi động cùng Windows thông qua Registry
+Luồng hoạt động:
+- Tạo Baseline: quét thư mục mục tiêu, tính toán mã băm SHA-256 cho nội dung từng tệp tin và sao lưu vào file 'snapshots/files', tham chiếu nội dung file thông qua việc lưu thông tin ở file trực tiếp trong thư mục 'snapshots'.
+- Lăng nghe sự kiện: mỗi khi có sự thay đổi của thư mục (tạo,sửa,xóa file) thì watchdog sẽ ngay lập tức phản hồi theo dạng thông báo popup của window dựa trên sự đối chiếu mã băm.
